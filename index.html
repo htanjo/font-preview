@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Font Preview</title>
+  <link rel="stylesheet" href="css/font-preview.css">
+</head>
+<body>
+  <div class="container">
+    <div class="configure">
+      <div>
+        <label>font-size:</label>
+        <input type="text" id="size" value="65%, 10px, 82%, 13px, 90%, 14px, 100%, 16px, 115%, 18px, 125%, 20px, 150%, 24px">
+      </div>
+      <div>
+        <label>font-family:</label>
+        <input type="text" id="family" value="sans-serif">
+      </div>
+      <div>
+        <label>line-height:</label>
+        <input type="text" id="height" value="1.4">
+      </div>
+      <div>
+        <label>letter-spacing:</label>
+        <input type="text" id="spacing" value="">
+      </div>
+      <div>
+        <label>Preview Text:</label>
+        <textarea id="text">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue hendrerit aliquam. Sed ornare enim sit amet risus vulputate quis facilisis odio consequat.
+123456789&lt;&gt;/?\_!&quot;#$%&amp;'()-=^~@`[]{};+:*</textarea>
+      </div>
+      <div><button type="button" id="submit">Update</button></div>
+    </div>
+    <div id="preview"></div>
+    <script type="text/x-handlebars-template" id="fontPreviewTemplate">
+      {{#each sizes}}
+        {{#if this}}
+          <div class="box" style="font-size: {{this}}; font-family: {{../../family}}; line-height: {{../../height}}; letter-spacing: {{../../spacing}}"><p><b>font-size: {{this}};</b></p><p>{{{../../text}}}</p><p><b>{{{../../text}}}</b></p></div>
+        {{/if}}
+      {{/each}}
+    </script>
+  </div>
+  <script src="js/jquery-1.8.1.min.js"></script>
+  <script src="js/handlebars-1.0.0.beta.6.js"></script>
+  <script src="js/font-preview.js"></script>
+</body>
+</html>

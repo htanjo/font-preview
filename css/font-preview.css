@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    background-color: #eee;
+}
+
+.container {
+    width: 720px;
+    margin: 20px auto;
+}
+
+.configure {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+}
+.configure div {
+    margin: 10px 0;
+}
+.configure label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.configure input {
+    width: 640px;
+    padding: 3px;
+    font-size: 13px;
+}
+.configure textarea {
+    display: block;
+    width: 640px;
+    min-height: 120px;
+    resize: vertical;
+    padding: 3px;
+    font-size: 13px;
+}
+
+.box {
+    margin: 10px 0;
+    padding: 5px 15px;
+    word-wrap: break-word;
+    background-color: #fff;
+}
+.box p {
+    margin: 1em 0;
+}
